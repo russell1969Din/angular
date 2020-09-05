@@ -1,0 +1,62 @@
+h1 {font-size:20px;}
+.formLine {
+    font-size:12px;
+    height:40px;
+}  
+input {
+    background-color:transparent;
+    text-align:left;
+    color:#fff;
+    clear:both;
+    border:solid 0px;
+    border-bottom:solid 1px #fff;
+    width:100%;
+}    
+select {
+    text-align:left;
+    color:#000;
+    clear:both;
+    width:100%;
+
+}
+
+button {
+        font-size:12px;
+}
+
+input[type='checkbox'], input[type='radio'] {
+  cursor: pointer;
+}
+
+.warn {
+    color:#cc0000;
+  }
+
+  .checkb {
+    float:left;
+    width: 50%;
+    border-top: dotted 1px #fff; 
+    padding: 5px 0 0 0;
+  }
+
+  .checkr {
+    float:left;
+    width:33%;
+    border-top: dotted 1px #fff;
+    padding: 5px 0 0 0; 
+     }
+
+     .txt {
+          text-align:center;
+          border: dotted 0px; 
+        }
+
+        .preview {
+            font-size:10px;
+            color:#435371;
+            line-height:12px ;
+            height:20px;
+    
+          }
+    
+

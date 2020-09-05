@@ -1,0 +1,67 @@
+<div class="container"> 
+    <h1>Nová osoba</h1>  
+
+    <!---<form class="" (keydown.enter)="addDude()">--->
+    <form >  
+      <div class="formLine">  
+        <input type="text" #inputWho class="" id="who" maxlength="30" [value]="newWho"  (input)="newWho=$event.target.value"  required autocomplete="off" />  
+        <span [class]="{'warn': newWho.trim().split(' ').length<2}">Meno a Priezvisko</span>
+    </div>  
+    <div class=" preview">
+      {{newWho}}
+    </div>
+      <div class="formLine">  
+        <input type="text" class="" id="wat"  maxlength="30" [value]="newWat"  (input)="newWat=$event.target.value"   autocomplete="off">  
+        <label [class]="{'warn': newWat.length==0}" for="wat">Zameranie</label>  
+    </div>
+    <div class=" preview">
+      {{newWat}}
+    </div>
+
+      <div class="formLine">  
+        <input type="number" class="" id="cool" [value]="newCool"  (input)="newCool=$event.target.value" autocomplete="off">  
+        <label [class]="{'warn': newCool<1}"  for="cool">Body</label>  
+    </div>
+    <div class=" preview">
+      {{newCool}}
+    </div>
+      
+
+    <div class="formLine">  
+        <select class="formSelect" id="educ" [value]="newEduc" (change)="newEduc=$event.target.value" required>  
+          <option *ngFor="let educ of educations" [value]="educ">{{educ}}</option>  
+        </select>  
+        <label [class]="{'warn': newEduc.length==0}" for="educ">Vzdelanie</label>  
+    </div>        
+    <div class=" preview">
+      {{newEduc}}
+    </div>
+
+    <div class=" formLine">
+      
+      <div class="checkb" ><input #inputMan [value]="newMan" (click)="newMan=$event.target.checked" type="radio" id="man" name="sel" /></div>
+      <div class="checkb" ><input #inputWoman [value]="newWoman" (click)="newWoman=$event.target.checked" type="radio" id="woman" name="sel" /></div>
+
+
+      <div class="checkb txt" ><label [class]="{'warn': !newMan && !newWoman }" for="man">Muž</label></div>
+      <div class="checkb txt" ><label [class]="{'warn': !newMan && !newWoman }" for="man">Žena</label></div>
+    </div>
+
+    <div class=" formLine">
+      <div class="checkr" ><input #inputSK [value]="newSK" (click)="isCheck()"  type="checkbox" id="sk"  /></div>
+      <div class="checkr" ><input #inputCZ [value]="newCZ" (click)="isCheck()" type="checkbox" id="cz"  /></div>
+      <div class="checkr" ><input #inputEN [value]="newEN" (click)="isCheck()" type="checkbox" id="en"  /></div>
+
+      <div class="checkr txt" ><label [class]="{'warn': !newSK && !newCZ && !newEN }" for="sk">SK</label></div>  
+      <div class="checkr txt" ><label [class]="{'warn': !newSK && !newCZ && !newEN }" for="cz">CZ</label></div>  
+      <div class="checkr txt" ><label [class]="{'warn': !newSK && !newCZ && !newEN }" for="en">EN</label>  </div>
+    </div>
+
+    <button   type="submit" 
+                (click)="addDude()" 
+                [disabled]="isDisabled()"
+                class="btn btn-success">Zápis</button>  
+
+
+  </form> 
+</div>      

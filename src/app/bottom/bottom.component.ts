@@ -10,9 +10,6 @@ import { ___people, JSONread} from 'src/main';
 export class BottomComponent {
   
   people = {};
-  constructor() {
-    this.people = JSONread();
-
-  }
+  constructor() {this.people = JSONread();}
 
   }  
