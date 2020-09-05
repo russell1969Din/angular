@@ -1,0 +1,37 @@
+
+
+<div [@dudeAnim] *ngFor="let dude of people">
+    <div [ngClass]="{'xview': dude.del}" >
+    <div class="x " ><a (click)="remove(dude.id)">X</a></div>
+    <div class="dude"
+    [ngClass] = "{ 
+        'gold': dude.id % 2 == 0, 
+        ' faded':dude.id % 2 > 0,
+        ' small' : dude.cool < 11,
+        ' big' : dude.cool > 30 }"
+    >
+    <span class="articleWho  ">{{dude.who}} ({{dude.id}})</span><br />
+    <span class="articleWat ">{{dude.wat}}&nbsp;-&nbsp;
+        <span [ngClass]="{'view': dude.man,'xview':!dude.man}">Muž</span>
+        <span  [ngClass]="{'view': !dude.man,'xview':dude.man}">Žena</span>
+
+
+    </span><br />
+    <span class="articleWat ">Vzdelanie: {{dude.educ}}&nbsp;&nbsp;</span><br />   
+    <span class="articleWat ">Znalosť jazykov: {{dude.lang}}&nbsp;&nbsp;</span>    
+</div>
+    <div class="cool " >
+        <input  class="coolNum " 
+                type="number" 
+                [value]="dude.cool"
+                [(ngModel)]="dude.cool" 
+                 />
+    </div>
+</div>
+</div>
+<br />
+
+
+
+
+

@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-color: #162643;
+    color:#fff;
+}
+
+.strongRed {
+    color: red;
+    font-weight: bold;
+}
+
+.smallRed {
+    color: magenta;
+    font-size:12px;
+}
+
+
+/*
+@import 'assets/fonts';
+@import 'assets/variables';
+@import 'assets/debug';
+@import 'assets/mixins';
+@import 'assets/general';
+@import 'assets/colors';
+@import 'assets/content';
+@import 'assets/forms';
+@import 'assets/responsive';
+@import 'assets/myCSS';
+*/
